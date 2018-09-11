@@ -1,0 +1,31 @@
+TITLE
+
+* Set the defaults for precision simulations
+DEFAULTS                                                              PRECISIO
+* Define the beam characteristics
+BEAM          -0.001              10000.                              PHOTON
+* Define the beam position
+BEAMPOS          12.       2.3       7.8
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+GEOBEGIN                                                              FLUGG
+GEOEND
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA          M1        1.
+ASSIGNMA          M2        2.
+ASSIGNMA          M3        3.
+ASSIGNMA    BLCKHOLE        4.
+ASSIGNMA      VACUUM        5.
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+MATERIAL                              1.       26.                    M1
+MATERIAL                              2.       27.                    M2
+MATERIAL                              3.       28.                    M3
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7...
+COMPOUND         1.0    COPPER                                        M1
+COMPOUND         1.0    CARBON                                        M2
+COMPOUND         1.0      IRON                                        M3
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7...
+* Set the random number seed
+RANDOMIZ          1.
+* Set the number of primary histories to be simulated in the run
+START       1000000.                            1.
+STOP
